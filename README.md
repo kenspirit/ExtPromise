@@ -34,6 +34,22 @@ Simply make an Ajax call using Promise style like:
         });
 ```
 
+The basic usage syntax is:  
+
+```javascript
+    ExtPromise.Ajax().request(options).then(successCb, failureCb);
+```
+
+And I integrate with bluebird is because I especially like its style on error handling:  
+
+
+```javascript
+    ExtPromise.Ajax().request(options).then(successCb, failureCb)
+        .catch(function(e) {
+            // Properly handle it
+        });
+```
+
 ## Tests [![Build Status](https://secure.travis-ci.org/kenspirit/ExtPromise.png?branch=master)](https://secure.travis-ci.org/kenspirit/ExtPromise)  
 
 ### Only test fake Ajax call simulated using [Sinon.js][]
