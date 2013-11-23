@@ -1,0 +1,4 @@
+node_modules
+*.sublime*
+test-results.xml
+lib/ext*

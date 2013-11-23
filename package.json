@@ -1,0 +1,43 @@
+{
+  "name": "ExtPromise",
+  "version": "0.1.0",
+  "description": "Enable ExtJs Ajax call to use Promise style instead of callback",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "~3.0.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0",
+    "karma-script-launcher": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-jasmine": "~0.1.3",
+    "karma-coffee-preprocessor": "~0.1.0",
+    "requirejs": "~2.1.9",
+    "karma-requirejs": "~0.2.0",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma": "~0.10.5",
+    "karma-mocha": "~0.1.0",
+    "karma-junit-reporter": "~0.1.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/karma start karma.unit.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kenspirit/ExtPromise.git"
+  },
+  "keywords": [
+    "ExtJs",
+    "Promise"
+  ],
+  "author": "Ken Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kenspirit/ExtPromise/issues"
+  }
+}
