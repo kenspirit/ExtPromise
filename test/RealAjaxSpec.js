@@ -15,9 +15,7 @@ describe("Real: Ajax should be now working in promise style", function() {
                 expect(json).to.deep.equal(postData);
             })
             .then(done)
-            .catch(function(e) {
-                done(e);
-            });;
+            .catch(done);
     }
 
     function normalFailed(promiseFn, done) {
@@ -28,9 +26,7 @@ describe("Real: Ajax should be now working in promise style", function() {
                 expect(result.status).to.equal(500);
             })
             .then(done)
-            .catch(function(e) {
-                done(e);
-            });
+            .catch(done);
     }
 
     function scopeSuccess(promiseFn, done) {
@@ -40,9 +36,7 @@ describe("Real: Ajax should be now working in promise style", function() {
                 expect(result).to.equal('Ken is in scope');
             })
             .then(done)
-            .catch(function(e) {
-                done(e);
-            });;
+            .catch(done);
     }
 
     function scopeFailed(promiseFn, done) {
@@ -54,9 +48,7 @@ describe("Real: Ajax should be now working in promise style", function() {
                 expect(result.status).to.equal(500);
             })
             .then(done)
-            .catch(function(e) {
-                done(e);
-            });;
+            .catch(done);
     }
 
     describe('ExtPromise.Ajax', function() {

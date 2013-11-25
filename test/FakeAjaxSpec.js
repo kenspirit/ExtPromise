@@ -21,9 +21,7 @@ describe("Fake: Ajax should be now working in promise style", function() {
                 expect(result.responseText).to.equal('Bar');
             })
             .then(done)
-            .catch(function(e) {
-                done(e);
-            });
+            .catch(done);
 
         successRepond();
     }
@@ -36,9 +34,7 @@ describe("Fake: Ajax should be now working in promise style", function() {
                 expect(result.status).to.equal(500);
             })
             .then(done)
-            .catch(function(e) {
-                done(e);
-            });
+            .catch(done);
 
         failedRepond();
     }
@@ -49,7 +45,8 @@ describe("Fake: Ajax should be now working in promise style", function() {
             .then(function(result) {
                 expect(result).to.equal('Bar In scope');
             })
-            .then(done);
+            .then(done)
+            .catch(done);
 
         successRepond();
     }
@@ -62,7 +59,8 @@ describe("Fake: Ajax should be now working in promise style", function() {
             }, function(result) {
                 expect(result.status).to.equal(500);
             })
-            .then(done);
+            .then(done)
+            .catch(done);
 
         failedRepond();
     }
